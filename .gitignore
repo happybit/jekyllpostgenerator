@@ -1,0 +1,5 @@
+# markdown files
+*.markdown
+
+# Log Files
+*.log
