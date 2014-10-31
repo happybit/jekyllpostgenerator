@@ -20,9 +20,9 @@ def main(argv):
         fin.write("---\n")
         fin.write("layout: post\n")
         fin.write('title: "%s"\n' % postTitle)
-        fin.write('date: "%s" "%s"\n' %(todayDate, currentTime))
+        fin.write('date: %s %s\n' %(todayDate, currentTime))
         fin.write("comments: true\n")
-        fin.write('categories: "%s"\n' % postCategory.capitalize())
+        fin.write('categories: %s\n' % postCategory.capitalize())
         fin.write("---\n\n\n\n")
         fin.write("<!--more-->\n\n\n")
     
