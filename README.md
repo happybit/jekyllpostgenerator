@@ -1,6 +1,6 @@
 # newpost.py
 
-This is a tiny script written in Python to generate post template for Jekyll page.
+This is a simple script written in Python to generate post template for Jekyll page.
 
 ## Usage
 
