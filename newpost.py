@@ -16,20 +16,19 @@ def main(argv):
     fileName = todayDate + "-" + fileNameWithoutDate + ".markdown"
     # fileFullName = os.path.join(POST_PATH, fileName)
     
-    fin = open(fileName, 'w+')
-
-    fin.write("---\n")
-    fin.write("layout: post\n")
-    fin.write('title: "' + postTitle + '"\n')
-    fin.write("date: " + todayDate + " " + currentTime  + "\n")
-    fin.write("comments: true\n")
-    fin.write("categories: " + postCategory.capitalize() + "\n")
-    fin.write("---\n\n\n\n")
-    fin.write("<!--more-->\n\n\n")
+    with open(fileName, 'w+') as fin:
+        fin.write("---\n")
+        fin.write("layout: post\n")
+        fin.write('title: "%s"\n' % postTitle)
+        fin.write('date: "%s" "%s"\n' %(todayDate, currentTime))
+        fin.write("comments: true\n")
+        fin.write('categories: "%s"\n' % postCategory.capitalize())
+        fin.write("---\n\n\n\n")
+        fin.write("<!--more-->\n\n\n")
     
     fin.close()
 
-    print('"' + fileName + '" was created successfully.')
+    print('"%s" was created successfully.' % fileName)
     
 if __name__ == "__main__":
     main(sys.argv)
