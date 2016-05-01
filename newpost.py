@@ -11,8 +11,8 @@ def main(argv):
         postTitle = argv[1]
         postCategory = argv[2]
     except:
-		postTitle = "DEFAULT TITLE"
-		postCategory = "DEFAULT CATEGORY"
+        postTitle = "DEFAULT TITLE"
+        postCategory = "DEFAULT CATEGORY"
 
     todayDate = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     currentTime = time.strftime('%H:%M',time.localtime(time.time()))
